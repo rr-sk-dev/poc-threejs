@@ -111,3 +111,18 @@ window.addEventListener('mousemove', (ev) => {
     // gsap.to(mesh.material.color, { r: newColor.r, g: newColor.g, b: newColor.b });
   }
 });
+
+window.addEventListener('touchmove', (ev) => {
+  if (mouseDown) {
+    rgb = [
+      Math.round((ev.pageX / sizes.width) * 255),
+      Math.round((ev.pageY / sizes.height) * 255),
+      150, // Math.floor(Math.random() * 255) + 1,
+    ];
+
+    // Let's Animate
+    let newColor = new THREE.Color(`rgb(${rgb.join(',')})`);
+    gsap.to(mesh.material.color, newColor);
+    // gsap.to(mesh.material.color, { r: newColor.r, g: newColor.g, b: newColor.b });
+  }
+});
