@@ -85,7 +85,15 @@ window.addEventListener('mousedown', () => {
   mouseDown = true;
 });
 
+window.addEventListener('touchstart', () => {
+  mouseDown = true;
+});
+
 window.addEventListener('mouseup', () => {
+  mouseDown = false;
+});
+
+window.addEventListener('touchend', () => {
   mouseDown = false;
 });
 
