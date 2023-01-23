@@ -38,6 +38,10 @@ nav ul {
     gap: 4rem;
 }
 
+nav ul li:hover {
+    cursor: pointer;
+}
+
 .title {
     color: white;
     z-index: 2;
